@@ -18,7 +18,7 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const [formData, setFormData] = useState({ taxId: '', password: '' });
+  const [formData, setFormData] = useState({ identifier: '', password: '' });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function LoginPage() {
       login(response.data, response.data.token);
       router.push('/dashboard');
     } catch (err: any) {
-      setError('Invalid Tax ID or Password.');
+      setError('Invalid identifier or password. Try: Tax ID, Email, or CargoX ID');
       setIsLoading(false);
     }
   };
@@ -66,16 +66,19 @@ export default function LoginPage() {
               )}
 
               <div className="space-y-1">
-                <label className="text-sm font-medium text-slate-700">Tax ID / Username</label>
+                <label className="text-sm font-medium text-slate-700">Tax ID / Email / CargoX ID</label>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
                   <Input 
-                    placeholder="e.g. 100-200-300" 
+                    placeholder="Tax ID, Email, or CargoX ID" 
                     className="pl-10" 
-                    value={formData.taxId}
-                    onChange={(e) => setFormData({...formData, taxId: e.target.value})}
+                    value={formData.identifier}
+                    onChange={(e) => setFormData({...formData, identifier: e.target.value})}
                   />
                 </div>
+                <p className="text-xs text-slate-500 mt-1">
+                  Importer: Tax ID or Email | Exporter: Email or CargoX ID
+                </p>
               </div>
 
               <div className="space-y-1">

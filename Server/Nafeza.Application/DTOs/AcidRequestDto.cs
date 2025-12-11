@@ -12,4 +12,11 @@ namespace Nafeza.Application.DTOs
         public DateTime RequestDate { get; set; }
         public int ItemCount { get; set; }
     }
+
+    public class ValidateAciDto
+    {
+        public string AcidNumber { get; set; } = string.Empty;
+        public string ImporterTaxId { get; set; } = string.Empty;
+        public string ExporterId { get; set; } = string.Empty;
+    }
 }

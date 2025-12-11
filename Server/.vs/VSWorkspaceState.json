@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Nafeza.API",
+    "\\Nafeza.API\\Controllers",
+    "\\Nafeza.API\\Middleware",
+    "\\Nafeza.Application\\DTOs",
+    "\\Nafeza.Application\\Features",
+    "\\Nafeza.Application\\Features\\Auth",
+    "\\Nafeza.Application\\Features\\Auth\\Commands",
+    "\\Nafeza.Domain",
+    "\\Nafeza.Infrastructure\\Services"
+  ],
+  "SelectedNode": "\\Nafeza.API\\Nafeza.API.csproj",
+  "PreviewInSolutionExplorer": false
+}

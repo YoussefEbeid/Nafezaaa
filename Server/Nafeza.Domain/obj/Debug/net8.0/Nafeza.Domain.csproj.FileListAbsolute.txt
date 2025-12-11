@@ -1,0 +1,12 @@
+D:\Nafeza\src\Server\Nafeza.Domain\bin\Debug\net8.0\Nafeza.Domain.deps.json
+D:\Nafeza\src\Server\Nafeza.Domain\bin\Debug\net8.0\Nafeza.Domain.dll
+D:\Nafeza\src\Server\Nafeza.Domain\bin\Debug\net8.0\Nafeza.Domain.pdb
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.AssemblyInfoInputs.cache
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.AssemblyInfo.cs
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.csproj.CoreCompileInputs.cache
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.dll
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\refint\Nafeza.Domain.dll
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.pdb
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\ref\Nafeza.Domain.dll
+D:\Nafeza\src\Server\Nafeza.Domain\obj\Debug\net8.0\Nafeza.Domain.sourcelink.json

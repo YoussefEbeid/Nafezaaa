@@ -1,0 +1,379 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nafeza\\src\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\nafeza.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\nafeza.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\controllers\\acicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\controllers\\acicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\controllers\\tariffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\controllers\\tariffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3D4E5F6-A7B8-9012-CDEF-123456789012}|Nafeza.Domain\\Nafeza.Domain.csproj|d:\\nafeza\\src\\server\\nafeza.domain\\entities\\party.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3D4E5F6-A7B8-9012-CDEF-123456789012}|Nafeza.Domain\\Nafeza.Domain.csproj|solutionrelative:nafeza.domain\\entities\\party.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\features\\auth\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\features\\auth\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\middleware\\globalexceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\middleware\\globalexceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|d:\\nafeza\\src\\server\\nafeza.api\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|Nafeza.API\\Nafeza.API.csproj|solutionrelative:nafeza.api\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4E5F6A7-B8C9-0123-DEF0-123456789012}|Nafeza.Infrastructure\\Nafeza.Infrastructure.csproj|d:\\nafeza\\src\\server\\nafeza.infrastructure\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4E5F6A7-B8C9-0123-DEF0-123456789012}|Nafeza.Infrastructure\\Nafeza.Infrastructure.csproj|solutionrelative:nafeza.infrastructure\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\features\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\features\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\common\\interfaces\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\common\\interfaces\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\dtos\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\dtos\\auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\features\\aci\\getacistatusquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\features\\aci\\getacistatusquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\features\\aci\\createacicommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\features\\aci\\createacicommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\dtos\\acidrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\dtos\\acidrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\common\\interfaces\\icargoxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\common\\interfaces\\icargoxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|d:\\nafeza\\src\\server\\nafeza.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2C3D4E5-F6A7-8901-BCDE-F12345678901}|Nafeza.Application\\Nafeza.Application.csproj|solutionrelative:nafeza.application\\common\\interfaces\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Nafeza.API.csproj",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Nafeza.API.csproj",
+              "RelativeDocumentMoniker": "Nafeza.API\\Nafeza.API.csproj",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Nafeza.API.csproj",
+              "RelativeToolTip": "Nafeza.API\\Nafeza.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vwkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-28T23:44:12.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TariffController.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\TariffController.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Controllers\\TariffController.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\TariffController.cs",
+              "RelativeToolTip": "Nafeza.API\\Controllers\\TariffController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T21:21:55.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CurrencyController.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\CurrencyController.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Controllers\\CurrencyController.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\CurrencyController.cs",
+              "RelativeToolTip": "Nafeza.API\\Controllers\\CurrencyController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T20:51:31.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Party.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Domain\\Entities\\Party.cs",
+              "RelativeDocumentMoniker": "Nafeza.Domain\\Entities\\Party.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Domain\\Entities\\Party.cs",
+              "RelativeToolTip": "Nafeza.Domain\\Entities\\Party.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:29:55.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterCommand.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\Auth\\Commands\\RegisterCommand.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Features\\Auth\\Commands\\RegisterCommand.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\Auth\\Commands\\RegisterCommand.cs",
+              "RelativeToolTip": "Nafeza.Application\\Features\\Auth\\Commands\\RegisterCommand.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwEAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:29:22.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Program.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Program.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Program.cs",
+              "RelativeToolTip": "Nafeza.API\\Program.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:28:34.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GlobalExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Nafeza.API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:24:50.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Nafeza.API\\appsettings.json",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\appsettings.json",
+              "RelativeToolTip": "Nafeza.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-27T22:23:05.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AciController.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\AciController.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Controllers\\AciController.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\AciController.cs",
+              "RelativeToolTip": "Nafeza.API\\Controllers\\AciController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEgAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:22:10.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Nafeza.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:22:02.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiControllerBase.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\ApiControllerBase.cs",
+              "RelativeDocumentMoniker": "Nafeza.API\\Controllers\\ApiControllerBase.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.API\\Controllers\\ApiControllerBase.cs",
+              "RelativeToolTip": "Nafeza.API\\Controllers\\ApiControllerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:21:55.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Infrastructure\\Services\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "Nafeza.Infrastructure\\Services\\JwtTokenGenerator.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Infrastructure\\Services\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "Nafeza.Infrastructure\\Services\\JwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:20:32.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Features\\Auth\\Commands\\LoginCommand.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeToolTip": "Nafeza.Application\\Features\\Auth\\Commands\\LoginCommand.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:19:59.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IJwtTokenGenerator.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\IJwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Common\\Interfaces\\IJwtTokenGenerator.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\IJwtTokenGenerator.cs",
+              "RelativeToolTip": "Nafeza.Application\\Common\\Interfaces\\IJwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:19:07.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Auth.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DTOs\\Auth.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\DTOs\\Auth.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DTOs\\Auth.cs",
+              "RelativeToolTip": "Nafeza.Application\\DTOs\\Auth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:18:13.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Nafeza.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:16:19.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetAciStatusQuery.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\ACI\\GetAciStatusQuery.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Features\\ACI\\GetAciStatusQuery.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\ACI\\GetAciStatusQuery.cs",
+              "RelativeToolTip": "Nafeza.Application\\Features\\ACI\\GetAciStatusQuery.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:15:12.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateAciCommand.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\ACI\\CreateAciCommand.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Features\\ACI\\CreateAciCommand.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Features\\ACI\\CreateAciCommand.cs",
+              "RelativeToolTip": "Nafeza.Application\\Features\\ACI\\CreateAciCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:14:57.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AcidRequestDto.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DTOs\\AcidRequestDto.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\DTOs\\AcidRequestDto.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\DTOs\\AcidRequestDto.cs",
+              "RelativeToolTip": "Nafeza.Application\\DTOs\\AcidRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:14:02.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ICargoXService.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\ICargoXService.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Common\\Interfaces\\ICargoXService.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\ICargoXService.cs",
+              "RelativeToolTip": "Nafeza.Application\\Common\\Interfaces\\ICargoXService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:13:36.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Nafeza.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "ToolTip": "D:\\Nafeza\\src\\Server\\Nafeza.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "RelativeToolTip": "Nafeza.Application\\Common\\Interfaces\\IApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T22:13:06.123Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

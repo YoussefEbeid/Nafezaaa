@@ -19,6 +19,18 @@ api.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`;
   }
   
+  // For FormData, remove Content-Type to let browser set it with boundary
+  // This is critical - browser must set multipart/form-data with boundary parameter
+  if (config.data instanceof FormData) {
+    delete config.headers['Content-Type'];
+    delete config.headers['content-type'];
+    // Also remove from common headers if present
+    if (config.headers.common) {
+      delete config.headers.common['Content-Type'];
+      delete config.headers.common['content-type'];
+    }
+  }
+  
   return config;
 });
 

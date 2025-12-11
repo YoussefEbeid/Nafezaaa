@@ -6,16 +6,51 @@ import { useAuthStore } from '@/lib/store';
 import { Plus, FileText, Activity, CreditCard, TrendingUp } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { formatCurrency } from '@/lib/utils';
+import { useAciList } from '@/features/aci/api/useAci';
 
 export default function DashboardPage() {
   const user = useAuthStore((state) => state.user);
   const router = useRouter();
+  const { data: requests, isLoading } = useAciList();
+
+  // Calculate stats from real data
+  const activeShipments = requests?.filter(r => 
+    r.status.toLowerCase() === 'submitted' || r.status.toLowerCase() === 'approved'
+  ).length || 0;
+  
+  const pendingApproval = requests?.filter(r => 
+    r.status.toLowerCase() === 'draft'
+  ).length || 0;
 
   const stats = [
-    { title: 'Active Shipments', value: '12', icon: Activity, color: 'text-blue-600', bg: 'bg-blue-50' },
-    { title: 'Pending Approval', value: '3', icon: FileText, color: 'text-orange-600', bg: 'bg-orange-50' },
+    { title: 'Active Shipments', value: activeShipments.toString(), icon: Activity, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { title: 'Pending Approval', value: pendingApproval.toString(), icon: FileText, color: 'text-orange-600', bg: 'bg-orange-50' },
     { title: 'Wallet Balance', value: formatCurrency(45200), icon: CreditCard, color: 'text-green-600', bg: 'bg-green-50' },
   ];
+
+  // Get recent declarations (approved/submitted, sorted by date)
+  const recentDeclarations = requests
+    ?.filter(r => r.status.toLowerCase() === 'approved' || r.status.toLowerCase() === 'submitted')
+    .sort((a, b) => new Date(b.requestDate).getTime() - new Date(a.requestDate).getTime())
+    .slice(0, 5) || [];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status.toLowerCase()) {
+      case 'approved':
+        return 'bg-green-100 text-green-800';
+      case 'submitted':
+        return 'bg-blue-100 text-blue-800';
+      case 'draft':
+        return 'bg-orange-100 text-orange-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
 
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
@@ -59,35 +94,56 @@ export default function DashboardPage() {
           <CardTitle>Recent Declarations</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="relative overflow-x-auto">
-            <table className="w-full text-sm text-left text-slate-500">
-              <thead className="text-xs text-slate-700 uppercase bg-slate-50">
-                <tr>
-                  <th className="px-6 py-3">ACID Number</th>
-                  <th className="px-6 py-3">Exporter</th>
-                  <th className="px-6 py-3">Date</th>
-                  <th className="px-6 py-3">Status</th>
-                  <th className="px-6 py-3">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white border-b hover:bg-slate-50">
-                  <td className="px-6 py-4 font-mono text-nafeza-600 font-medium">2025-EG-192837465</td>
-                  <td className="px-6 py-4">Shenzhen Tech Ltd</td>
-                  <td className="px-6 py-4">Nov 28, 2025</td>
-                  <td className="px-6 py-4"><span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Approved</span></td>
-                  <td className="px-6 py-4"><Button variant="ghost" size="sm">View</Button></td>
-                </tr>
-                <tr className="bg-white hover:bg-slate-50">
-                  <td className="px-6 py-4 font-mono text-nafeza-600 font-medium">---</td>
-                  <td className="px-6 py-4">Global Logistics GmbH</td>
-                  <td className="px-6 py-4">Nov 27, 2025</td>
-                  <td className="px-6 py-4"><span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Draft</span></td>
-                  <td className="px-6 py-4"><Button variant="ghost" size="sm">Resume</Button></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          {isLoading ? (
+            <div className="text-center py-10 text-slate-500">Loading declarations...</div>
+          ) : recentDeclarations.length === 0 ? (
+            <div className="text-center py-10 space-y-4">
+              <FileText className="h-12 w-12 text-slate-300 mx-auto" />
+              <p className="text-slate-500">No declarations found</p>
+              <Button onClick={() => router.push('/dashboard/aci/new')} variant="outline">
+                Create Your First Request
+              </Button>
+            </div>
+          ) : (
+            <div className="relative overflow-x-auto">
+              <table className="w-full text-sm text-left text-slate-500">
+                <thead className="text-xs text-slate-700 uppercase bg-slate-50">
+                  <tr>
+                    <th className="px-6 py-3">ACID Number</th>
+                    <th className="px-6 py-3">Exporter</th>
+                    <th className="px-6 py-3">Date</th>
+                    <th className="px-6 py-3">Status</th>
+                    <th className="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {recentDeclarations.map((declaration) => (
+                    <tr key={declaration.id} className="bg-white border-b hover:bg-slate-50">
+                      <td className="px-6 py-4 font-mono text-nafeza-600 font-medium">
+                        {declaration.acidNumber}
+                      </td>
+                      <td className="px-6 py-4">{declaration.exporterName}</td>
+                      <td className="px-6 py-4">{formatDate(declaration.requestDate)}</td>
+                      <td className="px-6 py-4">
+                        <span className={`${getStatusColor(declaration.status)} text-xs font-medium px-2.5 py-0.5 rounded`}>
+                          {declaration.status}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          onClick={() => router.push(`/dashboard/aci/${declaration.id}`)}
+                        >
+                          View
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>

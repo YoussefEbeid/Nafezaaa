@@ -21,6 +21,16 @@ export interface UploadResponse {
   items: InvoiceItem[];
 }
 
+export interface AcidRequestDto {
+  id: number;
+  acidNumber: string;
+  importerName: string;
+  exporterName: string;
+  status: string;
+  requestDate: string;
+  itemCount: number;
+}
+
 // --- Hooks ---
 
 export const useCreateDraft = () => {
@@ -38,10 +48,29 @@ export const useUploadInvoice = () => {
       const formData = new FormData();
       formData.append('file', file);
       
-      const res = await api.post(`/aci/${id}/upload-invoice`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
+      // Don't set Content-Type header - axios interceptor will handle it
+      // The browser needs to set multipart/form-data with boundary automatically
+      const res = await api.post(`/aci/${id}/upload-invoice`, formData);
       return res.data as UploadResponse;
+    },
+  });
+};
+
+export const useSubmitAci = () => {
+  return useMutation({
+    mutationFn: async (id: number) => {
+      const res = await api.post(`/aci/${id}/submit`);
+      return res.data;
+    },
+  });
+};
+
+export const useAciList = () => {
+  return useQuery({
+    queryKey: ['aci-list'],
+    queryFn: async () => {
+      const res = await api.get('/aci/list');
+      return res.data as AcidRequestDto[];
     },
   });
 };
