@@ -22,6 +22,7 @@ import {
   Globe
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { Footer } from '@/components/shared/Footer';
 
 interface AboutContent {
   overview: {
@@ -334,39 +335,39 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero Header */}
-      <div className="bg-nafeza-700 text-white py-16 px-4 relative overflow-hidden">
+      <div className="bg-nafeza-700 text-white py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <button 
             onClick={() => router.push('/')} 
-            className="flex items-center text-nafeza-100 hover:text-white mb-6 transition-colors"
+            className="flex items-center text-nafeza-100 hover:text-white mb-4 sm:mb-6 transition-colors text-sm sm:text-base"
           >
             <ArrowLeft className="w-4 h-4 mr-1" /> Back to Home
           </button>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">{content.overview.title}</h1>
-          <p className="text-xl text-nafeza-100 max-w-3xl">{content.overview.subtitle}</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4">{content.overview.title}</h1>
+          <p className="text-base sm:text-lg lg:text-xl text-nafeza-100 max-w-3xl">{content.overview.subtitle}</p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12 sm:space-y-16">
         {/* Overview Section */}
         <section className="prose prose-lg max-w-none">
-          <div className="bg-white rounded-lg shadow-md p-8 md:p-12">
-            <p className="text-slate-700 text-lg leading-relaxed">{content.overview.description}</p>
+          <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 md:p-12">
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed">{content.overview.description}</p>
           </div>
         </section>
 
         {/* Single Window Concept */}
         <section>
-          <h2 className="text-3xl font-bold text-nafeza-700 mb-6">{content.singleWindow.title}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700 mb-4 sm:mb-6">{content.singleWindow.title}</h2>
           <Card className="shadow-md border-none">
-            <CardContent className="p-8">
-              <p className="text-slate-700 text-lg mb-6">{content.singleWindow.description}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <CardContent className="p-6 sm:p-8">
+              <p className="text-slate-700 text-base sm:text-lg mb-4 sm:mb-6">{content.singleWindow.description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 {content.singleWindow.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-nafeza-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">{benefit}</span>
+                  <div key={index} className="flex items-start gap-2 sm:gap-3">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-nafeza-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 text-sm sm:text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -375,42 +376,42 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <Card className="shadow-md border-none bg-gradient-to-br from-nafeza-50 to-white">
-            <CardContent className="p-8">
+            <CardContent className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <Target className="w-8 h-8 text-nafeza-600" />
-                <h3 className="text-2xl font-bold text-nafeza-700">{content.mission.title}</h3>
+                <Target className="w-6 h-6 sm:w-8 sm:h-8 text-nafeza-600" />
+                <h3 className="text-xl sm:text-2xl font-bold text-nafeza-700">{content.mission.title}</h3>
               </div>
-              <p className="text-slate-700 leading-relaxed">{content.mission.description}</p>
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">{content.mission.description}</p>
             </CardContent>
           </Card>
 
           <Card className="shadow-md border-none bg-gradient-to-br from-nafeza-50 to-white">
-            <CardContent className="p-8">
+            <CardContent className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <Eye className="w-8 h-8 text-nafeza-600" />
-                <h3 className="text-2xl font-bold text-nafeza-700">{content.vision.title}</h3>
+                <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-nafeza-600" />
+                <h3 className="text-xl sm:text-2xl font-bold text-nafeza-700">{content.vision.title}</h3>
               </div>
-              <p className="text-slate-700 leading-relaxed">{content.vision.description}</p>
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">{content.vision.description}</p>
             </CardContent>
           </Card>
         </section>
 
         {/* Services */}
         <section>
-          <h2 className="text-3xl font-bold text-nafeza-700 mb-6">{content.services.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700 mb-4 sm:mb-6">{content.services.title}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {content.services.items.map((service, index) => {
               const Icon = iconMap[service.icon] || FileText;
               return (
                 <Card key={index} className="hover:shadow-lg transition-shadow border-none shadow-md">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-nafeza-50 text-nafeza-600 rounded-full flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6" />
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-nafeza-50 text-nafeza-600 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
-                    <h3 className="font-bold text-lg text-slate-800 mb-2">{service.name}</h3>
-                    <p className="text-slate-600 text-sm">{service.description}</p>
+                    <h3 className="font-bold text-base sm:text-lg text-slate-800 mb-2">{service.name}</h3>
+                    <p className="text-slate-600 text-xs sm:text-sm">{service.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -425,10 +426,10 @@ export default function AboutPage() {
               (statsSectionRef as React.MutableRefObject<HTMLElement | null>).current = el;
             }
           }}
-          className="bg-nafeza-700 rounded-lg shadow-xl p-8 md:p-12 text-white"
+          className="bg-nafeza-700 rounded-lg shadow-xl p-6 sm:p-8 md:p-12 text-white"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center">{content.statistics.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">{content.statistics.title}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {content.statistics.items.map((stat, index) => (
               <AnimatedStat
                 key={index}
@@ -443,13 +444,13 @@ export default function AboutPage() {
 
         {/* Values */}
         <section>
-          <h2 className="text-3xl font-bold text-nafeza-700 mb-6">{content.values.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700 mb-4 sm:mb-6">{content.values.title}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {content.values.items.map((value, index) => (
               <Card key={index} className="shadow-md border-none">
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg text-nafeza-600 mb-2">{value.name}</h3>
-                  <p className="text-slate-600 text-sm">{value.description}</p>
+                <CardContent className="p-4 sm:p-6">
+                  <h3 className="font-bold text-base sm:text-lg text-nafeza-600 mb-2">{value.name}</h3>
+                  <p className="text-slate-600 text-xs sm:text-sm">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -459,16 +460,16 @@ export default function AboutPage() {
         {/* Centers Network */}
         <section>
           <Card className="shadow-md border-none">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <MapPin className="w-8 h-8 text-nafeza-600" />
-                <h2 className="text-3xl font-bold text-nafeza-700">{content.network.title}</h2>
+            <CardContent className="p-6 sm:p-8">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-nafeza-600 flex-shrink-0" />
+                <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700">{content.network.title}</h2>
               </div>
-              <p className="text-slate-700 mb-6">{content.network.description}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <p className="text-slate-700 text-sm sm:text-base mb-4 sm:mb-6">{content.network.description}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 {content.network.locations.map((location, index) => (
-                  <div key={index} className="flex items-center gap-2 text-slate-700">
-                    <Building className="w-4 h-4 text-nafeza-600" />
+                  <div key={index} className="flex items-center gap-2 text-slate-700 text-sm sm:text-base">
+                    <Building className="w-3 h-3 sm:w-4 sm:h-4 text-nafeza-600 flex-shrink-0" />
                     <span>{location}</span>
                   </div>
                 ))}
@@ -480,17 +481,17 @@ export default function AboutPage() {
         {/* Sustainable Development */}
         <section>
           <Card className="shadow-md border-none bg-gradient-to-br from-green-50 to-white">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Globe className="w-8 h-8 text-green-600" />
-                <h2 className="text-3xl font-bold text-nafeza-700">{content.development.title}</h2>
+            <CardContent className="p-6 sm:p-8">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 flex-shrink-0" />
+                <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700">{content.development.title}</h2>
               </div>
-              <p className="text-slate-700 mb-6">{content.development.description}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <p className="text-slate-700 text-sm sm:text-base mb-4 sm:mb-6">{content.development.description}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 {content.development.principles.map((principle, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-700">{principle}</span>
+                  <div key={index} className="flex items-start gap-2 sm:gap-3">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 text-sm sm:text-base">{principle}</span>
                   </div>
                 ))}
               </div>
@@ -501,32 +502,32 @@ export default function AboutPage() {
         {/* Contact Section */}
         <section>
           <Card className="shadow-md border-none bg-nafeza-50">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-nafeza-700 mb-6">{content.contact.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-nafeza-600 mt-1 flex-shrink-0" />
+            <CardContent className="p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-nafeza-700 mb-4 sm:mb-6">{content.contact.title}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-nafeza-600 mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-slate-800 mb-1">Email</div>
-                    <a href={`mailto:${content.contact.email}`} className="text-nafeza-600 hover:underline">
+                    <div className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">Email</div>
+                    <a href={`mailto:${content.contact.email}`} className="text-nafeza-600 hover:underline text-xs sm:text-sm break-all">
                       {content.contact.email}
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-nafeza-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-nafeza-600 mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-slate-800 mb-1">Phone</div>
-                    <a href={`tel:${content.contact.phone}`} className="text-nafeza-600 hover:underline">
+                    <div className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">Phone</div>
+                    <a href={`tel:${content.contact.phone}`} className="text-nafeza-600 hover:underline text-xs sm:text-sm">
                       {content.contact.phone}
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Building className="w-5 h-5 text-nafeza-600 mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-2 sm:gap-3 sm:col-span-2 lg:col-span-1">
+                  <Building className="w-4 h-4 sm:w-5 sm:h-5 text-nafeza-600 mt-1 flex-shrink-0" />
                   <div>
-                    <div className="font-semibold text-slate-800 mb-1">Address</div>
-                    <p className="text-slate-700">{content.contact.address}</p>
+                    <div className="font-semibold text-slate-800 mb-1 text-sm sm:text-base">Address</div>
+                    <p className="text-slate-700 text-xs sm:text-sm">{content.contact.address}</p>
                   </div>
                 </div>
               </div>
@@ -536,44 +537,7 @@ export default function AboutPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="text-white font-bold text-xl mb-4">NAFEZA</div>
-            <p className="text-sm">Misr Technology Services (MTS)</p>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">Platform</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <button onClick={() => router.push('/about')} className="hover:text-white transition-colors">
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button onClick={() => router.push('/services')} className="hover:text-white transition-colors">
-                  Services
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <button onClick={() => router.push('/help')} className="hover:text-white transition-colors">
-                  Help Center
-                </button>
-              </li>
-              <li className="hover:text-white cursor-pointer transition-colors">Contact Support</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
-            <Globe className="h-5 w-5 hover:text-white cursor-pointer transition-colors" />
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

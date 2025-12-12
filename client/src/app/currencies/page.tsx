@@ -47,28 +47,28 @@ export default function CurrenciesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 p-8">
-      <div className="max-w-5xl mx-auto space-y-6">
+    <div className="min-h-screen bg-slate-50 p-4 sm:p-6 lg:p-8">
+      <div className="max-w-5xl mx-auto space-y-4 sm:space-y-6">
         
         {/* Header */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <button onClick={() => router.push('/')} className="flex items-center text-slate-500 hover:text-nafeza-600 mb-2">
+            <button onClick={() => router.push('/')} className="flex items-center text-slate-500 hover:text-nafeza-600 mb-2 text-sm sm:text-base">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to Home
             </button>
-            <h1 className="text-3xl font-bold text-nafeza-700">Foreign Exchange Rates</h1>
-            <p className="text-slate-500">Official rates according to the Egyptian Customs Authority</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-nafeza-700">Foreign Exchange Rates</h1>
+            <p className="text-xs sm:text-sm text-slate-500">Official rates according to the Egyptian Customs Authority</p>
           </div>
-          <div className="text-right hidden md:block">
-            <p className="text-sm font-bold text-nafeza-600">Last Update</p>
-            <p className="text-slate-600">{new Date().toLocaleDateString()}</p>
+          <div className="text-left sm:text-right w-full sm:w-auto">
+            <p className="text-xs sm:text-sm font-bold text-nafeza-600">Last Update</p>
+            <p className="text-xs sm:text-sm text-slate-600">{new Date().toLocaleDateString()}</p>
           </div>
         </div>
 
         {/* Currency List */}
         <Card className="border-none shadow-lg">
-          <CardContent className="p-0">
-            <div className="grid grid-cols-12 bg-slate-100 p-4 font-semibold text-slate-700 text-sm">
+          <CardContent className="p-0 overflow-x-auto">
+            <div className="grid grid-cols-12 bg-slate-100 p-3 sm:p-4 font-semibold text-slate-700 text-xs sm:text-sm min-w-[600px]">
               <div className="col-span-1"></div>
               <div className="col-span-4">Currency</div>
               <div className="col-span-2">Code</div>
@@ -80,37 +80,37 @@ export default function CurrenciesPage() {
               <div key={curr.code} className="border-b last:border-0">
                 {/* Row */}
                 <div 
-                  className={`grid grid-cols-12 p-4 items-center hover:bg-slate-50 transition-colors cursor-pointer ${expandedCode === curr.code ? 'bg-blue-50' : ''}`}
+                  className={`grid grid-cols-12 p-3 sm:p-4 items-center hover:bg-slate-50 transition-colors cursor-pointer min-w-[600px] ${expandedCode === curr.code ? 'bg-blue-50' : ''}`}
                   onClick={() => toggleExpand(curr.code)}
                 >
-                  <div className="col-span-1 text-2xl">{curr.flag}</div>
-                  <div className="col-span-4 font-medium text-slate-800">{curr.name}</div>
-                  <div className="col-span-2 font-mono text-slate-500">{curr.code}</div>
-                  <div className="col-span-3 text-right font-bold text-nafeza-700">{curr.rate.toFixed(4)}</div>
+                  <div className="col-span-1 text-xl sm:text-2xl">{curr.flag}</div>
+                  <div className="col-span-4 font-medium text-slate-800 text-sm sm:text-base">{curr.name}</div>
+                  <div className="col-span-2 font-mono text-slate-500 text-xs sm:text-sm">{curr.code}</div>
+                  <div className="col-span-3 text-right font-bold text-nafeza-700 text-sm sm:text-base">{curr.rate.toFixed(4)}</div>
                   <div className="col-span-2 flex justify-center text-slate-400">
-                    {expandedCode === curr.code ? <ChevronUp /> : <ChevronDown />}
+                    {expandedCode === curr.code ? <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5" /> : <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />}
                   </div>
                 </div>
 
                 {/* Expanded Chart Area */}
                 {expandedCode === curr.code && (
-                  <div className="p-6 bg-white border-t border-slate-100">
-                    <div className="flex justify-between items-center mb-6">
-                      <h3 className="text-sm font-bold text-nafeza-600">
+                  <div className="p-4 sm:p-6 bg-white border-t border-slate-100">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mb-4 sm:mb-6">
+                      <h3 className="text-xs sm:text-sm font-bold text-nafeza-600">
                         Exchange rate of {curr.name} ({curr.code}) against Egyptian Pound
                       </h3>
                       
                       {/* INTERACTIVE BUTTONS */}
-                      <div className="flex bg-slate-100 rounded-md p-1">
+                      <div className="flex bg-slate-100 rounded-md p-1 w-full sm:w-auto">
                         <button 
-                          onClick={() => setTimeRange('1M')}
-                          className={`px-3 py-1 text-xs font-medium rounded transition-all ${timeRange === '1M' ? 'bg-white text-nafeza-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                          onClick={(e) => { e.stopPropagation(); setTimeRange('1M'); }}
+                          className={`flex-1 sm:flex-initial px-3 py-1 text-xs font-medium rounded transition-all ${timeRange === '1M' ? 'bg-white text-nafeza-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                         >
                           1 Month
                         </button>
                         <button 
-                          onClick={() => setTimeRange('3M')}
-                          className={`px-3 py-1 text-xs font-medium rounded transition-all ${timeRange === '3M' ? 'bg-white text-nafeza-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                          onClick={(e) => { e.stopPropagation(); setTimeRange('3M'); }}
+                          className={`flex-1 sm:flex-initial px-3 py-1 text-xs font-medium rounded transition-all ${timeRange === '3M' ? 'bg-white text-nafeza-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                         >
                           3 Months
                         </button>
@@ -118,7 +118,7 @@ export default function CurrenciesPage() {
                     </div>
                     
                     {/* CHART */}
-                    <div className="h-[300px] w-full">
+                    <div className="h-[250px] sm:h-[300px] md:h-[350px] w-full">
                       <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={historyData}>
                           <defs>
