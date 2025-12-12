@@ -6,8 +6,11 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Search, FileText, Hash } from 'lucide-react';
+import { useTranslation } from '@/lib/i18n';
+import { useLanguageStore } from '@/lib/store';
 
 export default function TariffSearchPage() {
+  const { t, language } = useTranslation();
   const [activeTab, setActiveTab] = useState<'code' | 'text'>('code');
   const [chapters, setChapters] = useState<any[]>([]);
   const [results, setResults] = useState<any[]>([]);
@@ -46,8 +49,8 @@ export default function TariffSearchPage() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold text-nafeza-700">Tariff Search</h1>
-        <p className="text-slate-500 mt-1">Look up HS Codes, Duty Rates, and Regulations</p>
+        <h1 className="text-3xl font-bold text-nafeza-700">{t('dashboard.tariffSearch')}</h1>
+        <p className="text-slate-500 mt-1">{t('dashboard.lookupHSCodes')}</p>
       </div>
 
       <Card className="border-none shadow-md">
@@ -58,7 +61,7 @@ export default function TariffSearchPage() {
               activeTab === 'code' ? 'bg-white text-nafeza-600 border-t-2 border-t-nafeza-600' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
             }`}
           >
-            <Hash className="w-4 h-4 mr-2" /> Search by Item Number
+            <Hash className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} /> {t('dashboard.searchByItemNumber')}
           </button>
           <button
             onClick={() => { setActiveTab('text'); setResults([]); }}
@@ -66,7 +69,7 @@ export default function TariffSearchPage() {
               activeTab === 'text' ? 'bg-white text-nafeza-600 border-t-2 border-t-nafeza-600' : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
             }`}
           >
-            <FileText className="w-4 h-4 mr-2" /> Text Search
+            <FileText className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} /> {t('dashboard.textSearch')}
           </button>
         </div>
 
@@ -74,59 +77,59 @@ export default function TariffSearchPage() {
           <div className="space-y-6">
             {activeTab === 'code' ? (
               <div className="space-y-4">
-                <label className="block text-sm font-medium text-slate-700">Item Number (HS Code)</label>
-                <div className="flex gap-4">
+                <label className="block text-sm font-medium text-slate-700">{t('dashboard.itemNumberHSCode')}</label>
+                <div className={`flex gap-4 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                   <Input
-                    placeholder="e.g. 8517"
+                    placeholder={t('dashboard.itemNumberPlaceholder')}
                     value={searchCode}
                     onChange={(e) => setSearchCode(e.target.value)}
                     className="text-lg"
                   />
                   <Button size="lg" onClick={handleSearch} isLoading={isLoading}>
-                    <Search className="w-4 h-4 mr-2" /> Inquire
+                    <Search className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} /> {t('dashboard.inquire')}
                   </Button>
                 </div>
-                <p className="text-xs text-slate-400">Enter at least 4 digits.</p>
+                <p className="text-xs text-slate-400">{t('dashboard.enterAtLeast4Digits')}</p>
               </div>
             ) : (
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Chapter</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-1">{t('dashboard.chapter')}</label>
                     <select
                       className="flex h-10 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-nafeza-500"
                       value={selectedChapter}
                       onChange={(e) => setSelectedChapter(e.target.value)}
                     >
-                      <option value="">All Chapters</option>
+                      <option value="">{t('dashboard.allChapters')}</option>
                       {chapters.map((ch: any) => (
                         <option key={ch.id} value={ch.id}>{ch.code} - {ch.name}</option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Item Name</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-1">{t('dashboard.itemName')}</label>
                     <Input
-                      placeholder="e.g. Tomatoes"
+                      placeholder={t('dashboard.itemNamePlaceholder')}
                       value={searchText}
                       onChange={(e) => setSearchText(e.target.value)}
                     />
                   </div>
                 </div>
                 <Button size="lg" className="w-full md:w-auto" onClick={handleSearch} isLoading={isLoading}>
-                  <Search className="w-4 h-4 mr-2" /> Text Search
+                  <Search className={`w-4 h-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} /> {t('dashboard.textSearch')}
                 </Button>
               </div>
             )}
 
             {results.length > 0 && (
               <div className="mt-8 border rounded-lg overflow-hidden">
-                <table className="w-full text-sm text-left">
+                <table className={`w-full text-sm text-slate-500 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                   <thead className="bg-slate-100 text-slate-600 font-bold uppercase text-xs">
                     <tr>
-                      <th className="px-6 py-4">HS Code</th>
-                      <th className="px-6 py-4">Description</th>
-                      <th className="px-6 py-4 text-right">Duty Rate</th>
+                      <th className="px-6 py-4">{t('tariff.hsCode')}</th>
+                      <th className="px-6 py-4">{t('tariff.description')}</th>
+                      <th className={`px-6 py-4 ${language === 'ar' ? 'text-left' : 'text-right'}`}>{t('tariff.dutyRate')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
@@ -148,7 +151,7 @@ export default function TariffSearchPage() {
 
             {!isLoading && results.length === 0 && (searchCode || searchText) && (
               <div className="text-center py-8 text-slate-400">
-                No items found matching your criteria.
+                {t('common.noResults')}
               </div>
             )}
           </div>

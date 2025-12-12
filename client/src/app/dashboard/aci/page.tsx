@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/Button';
 import { useAciList } from '@/features/aci/api/useAci';
 import { Plus, FileText, Eye, ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/lib/i18n';
+import { useLanguageStore } from '@/lib/store';
 // Date formatting helper
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -14,6 +16,7 @@ const formatDate = (dateString: string) => {
 export default function AciRequestsPage() {
   const router = useRouter();
   const { data: requests, isLoading } = useAciList();
+  const { t, language } = useTranslation();
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
@@ -33,19 +36,19 @@ export default function AciRequestsPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-nafeza-700">ACI Requests</h1>
-          <p className="text-slate-500 mt-1">Manage your Advance Cargo Information requests</p>
+          <h1 className="text-3xl font-bold text-nafeza-700">{t('dashboard.aciRequests')}</h1>
+          <p className="text-slate-500 mt-1">{language === 'ar' ? 'إدارة طلبات معلومات الشحن المسبق' : 'Manage your Advance Cargo Information requests'}</p>
         </div>
         <Button onClick={() => router.push('/dashboard/aci/new')} className="shadow-lg bg-nafeza-accent hover:bg-yellow-600 text-white">
-          <Plus className="mr-2 h-4 w-4" />
-          New ACI Request
+          <Plus className={`h-4 w-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+          {t('dashboard.newACIRequest')}
         </Button>
       </div>
 
       {/* Requests Table */}
       <Card className="border-none shadow-md">
         <CardHeader>
-          <CardTitle>All Requests</CardTitle>
+          <CardTitle>{t('dashboard.allRequests')}</CardTitle>
         </CardHeader>
         <CardContent>
           {isLoading ? (
@@ -60,7 +63,7 @@ export default function AciRequestsPage() {
             </div>
           ) : (
             <div className="relative overflow-x-auto">
-              <table className="w-full text-sm text-left text-slate-500">
+              <table className={`w-full text-sm text-slate-500 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                 <thead className="text-xs text-slate-700 uppercase bg-slate-50">
                   <tr>
                     <th className="px-6 py-3">ACID Number</th>
@@ -93,8 +96,8 @@ export default function AciRequestsPage() {
                           size="sm"
                           onClick={() => router.push(`/dashboard/aci/${request.id}`)}
                         >
-                          <Eye className="h-4 w-4 mr-1" />
-                          View
+                          <Eye className={`h-4 w-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                          {t('common.view')}
                         </Button>
                       </td>
                     </tr>

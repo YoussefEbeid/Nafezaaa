@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/Button';
 import { useAciList } from '@/features/aci/api/useAci';
 import { FileText, Eye } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from '@/lib/i18n';
+import { useLanguageStore } from '@/lib/store';
 // Date formatting helper
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -14,6 +16,7 @@ const formatDate = (dateString: string) => {
 export default function DeclarationsPage() {
   const router = useRouter();
   const { data: requests, isLoading } = useAciList();
+  const { t, language } = useTranslation();
 
   // Filter only approved/submitted declarations
   const declarations = requests?.filter(r => 
@@ -36,14 +39,14 @@ export default function DeclarationsPage() {
     <div className="space-y-8">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold text-nafeza-700">Declarations (46KM)</h1>
-        <p className="text-slate-500 mt-1">View your submitted customs declarations</p>
+        <h1 className="text-3xl font-bold text-nafeza-700">{t('dashboard.declarations46KM')}</h1>
+        <p className="text-slate-500 mt-1">{language === 'ar' ? 'عرض الإقرارات الجمركية المقدمة' : 'View your submitted customs declarations'}</p>
       </div>
 
       {/* Declarations Table */}
       <Card className="border-none shadow-md">
         <CardHeader>
-          <CardTitle>Recent Declarations</CardTitle>
+          <CardTitle>{t('dashboard.recentDeclarations')}</CardTitle>
         </CardHeader>
         <CardContent>
           {isLoading ? (
@@ -56,7 +59,7 @@ export default function DeclarationsPage() {
             </div>
           ) : (
             <div className="relative overflow-x-auto">
-              <table className="w-full text-sm text-left text-slate-500">
+              <table className={`w-full text-sm text-slate-500 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                 <thead className="text-xs text-slate-700 uppercase bg-slate-50">
                   <tr>
                     <th className="px-6 py-3">ACID Number</th>
@@ -87,8 +90,8 @@ export default function DeclarationsPage() {
                           size="sm"
                           onClick={() => router.push(`/dashboard/aci/${declaration.id}`)}
                         >
-                          <Eye className="h-4 w-4 mr-1" />
-                          View
+                          <Eye className={`h-4 w-4 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} />
+                          {t('common.view')}
                         </Button>
                       </td>
                     </tr>

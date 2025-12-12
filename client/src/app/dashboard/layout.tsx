@@ -4,6 +4,7 @@ import { Sidebar } from '@/components/shared/Sidebar';
 import { useAuthStore } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { useLanguageStore } from '@/lib/store';
 
 export default function DashboardLayout({
   children,
@@ -11,6 +12,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
+  const language = useLanguageStore((state) => state.language);
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   // Simple client-side protection
@@ -28,7 +30,7 @@ export default function DashboardLayout({
       <Sidebar />
 
       {/* 2. The Main Content Area */}
-      <main className="flex-1 ml-64 p-8">
+      <main className={`flex-1 p-8 ${language === 'ar' ? 'mr-64' : 'ml-64'}`}>
         <div className="max-w-7xl mx-auto">
           {children}
         </div>

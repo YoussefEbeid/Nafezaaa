@@ -42,3 +42,49 @@ export const useAuthStore = create<AuthState>()(
     }
   )
 );
+
+// Language Store
+export type Language = 'en' | 'ar';
+
+interface LanguageState {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  toggleLanguage: () => void;
+}
+
+export const useLanguageStore = create<LanguageState>()(
+  persist(
+    (set) => ({
+      language: 'en',
+      setLanguage: (lang) => {
+        set({ language: lang });
+        // Update HTML lang attribute and dir
+        if (typeof document !== 'undefined') {
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        }
+      },
+      toggleLanguage: () => {
+        set((state) => {
+          const newLang = state.language === 'en' ? 'ar' : 'en';
+          // Update HTML lang attribute and dir
+          if (typeof document !== 'undefined') {
+            document.documentElement.lang = newLang;
+            document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+          }
+          return { language: newLang };
+        });
+      },
+    }),
+    {
+      name: 'nafeza-language', // Key in localStorage
+      onRehydrateStorage: () => (state) => {
+        // Update HTML attributes on rehydration
+        if (state && typeof document !== 'undefined') {
+          document.documentElement.lang = state.language;
+          document.documentElement.dir = state.language === 'ar' ? 'rtl' : 'ltr';
+        }
+      },
+    }
+  )
+);

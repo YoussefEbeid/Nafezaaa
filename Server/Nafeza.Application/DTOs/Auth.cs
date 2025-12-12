@@ -8,6 +8,14 @@ namespace Nafeza.Application.DTOs.Auth
         public bool IsETokenLogin { get; set; } = false; // "Visual" toggle for the interview
     }
 
+    // Token Login Request
+    public class TokenLoginRequestDto
+    {
+        public string Identifier { get; set; } = string.Empty; // TaxId, Email, or CargoXId
+        public string TokenPin { get; set; } = string.Empty;
+        public string CertificatePassword { get; set; } = string.Empty;
+    }
+
     // What we send back
     public class LoginResponseDto
     {

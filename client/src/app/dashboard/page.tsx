@@ -2,16 +2,18 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { useAuthStore } from '@/lib/store';
+import { useAuthStore, useLanguageStore } from '@/lib/store';
 import { Plus, FileText, Activity, CreditCard, TrendingUp } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { formatCurrency } from '@/lib/utils';
 import { useAciList } from '@/features/aci/api/useAci';
+import { useTranslation } from '@/lib/i18n';
 
 export default function DashboardPage() {
   const user = useAuthStore((state) => state.user);
   const router = useRouter();
   const { data: requests, isLoading } = useAciList();
+  const { t, language } = useTranslation();
 
   // Calculate stats from real data
   const activeShipments = requests?.filter(r => 
@@ -23,9 +25,9 @@ export default function DashboardPage() {
   ).length || 0;
 
   const stats = [
-    { title: 'Active Shipments', value: activeShipments.toString(), icon: Activity, color: 'text-blue-600', bg: 'bg-blue-50' },
-    { title: 'Pending Approval', value: pendingApproval.toString(), icon: FileText, color: 'text-orange-600', bg: 'bg-orange-50' },
-    { title: 'Wallet Balance', value: formatCurrency(45200), icon: CreditCard, color: 'text-green-600', bg: 'bg-green-50' },
+    { title: t('dashboard.activeShipments'), value: activeShipments.toString(), icon: Activity, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { title: t('dashboard.pendingApproval'), value: pendingApproval.toString(), icon: FileText, color: 'text-orange-600', bg: 'bg-orange-50' },
+    { title: t('dashboard.walletBalance'), value: formatCurrency(45200), icon: CreditCard, color: 'text-green-600', bg: 'bg-green-50' },
   ];
 
   // Get recent declarations (approved/submitted, sorted by date)
@@ -57,12 +59,12 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-nafeza-700">Overview</h1>
-          <p className="text-slate-500 mt-1">Hello, <span className="font-semibold text-nafeza-600">{user?.name || 'Trader'}</span>. Here is what's happening today.</p>
+          <h1 className="text-3xl font-bold text-nafeza-700">{t('dashboard.overview')}</h1>
+          <p className="text-slate-500 mt-1">{language === 'ar' ? `مرحباً، ${user?.name || 'تاجر'}. إليك ما يحدث اليوم.` : `Hello, ${user?.name || 'Trader'}. Here is what's happening today.`}</p>
         </div>
         <Button onClick={() => router.push('/dashboard/aci/new')} className="shadow-lg bg-nafeza-accent hover:bg-yellow-600 text-white">
-          <Plus className="mr-2 h-4 w-4" />
-          New ACI Request
+          <Plus className={`h-4 w-4 ${language === 'ar' ? 'ml-2' : 'mr-2'}`} />
+          {t('dashboard.newACIRequest')}
         </Button>
       </div>
 
@@ -80,8 +82,8 @@ export default function DashboardPage() {
                   <stat.icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
               </div>
-              <div className="mt-4 flex items-center text-xs text-green-600 font-medium">
-                <TrendingUp className="h-3 w-3 mr-1" /> +2.5% from last month
+              <div className={`mt-4 flex items-center text-xs text-green-600 font-medium ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                <TrendingUp className={`h-3 w-3 ${language === 'ar' ? 'ml-1' : 'mr-1'}`} /> +2.5% from last month
               </div>
             </CardContent>
           </Card>
@@ -91,7 +93,7 @@ export default function DashboardPage() {
       {/* Recent Activity Table */}
       <Card className="border-none shadow-md">
         <CardHeader>
-          <CardTitle>Recent Declarations</CardTitle>
+          <CardTitle>{t('dashboard.recentDeclarations')}</CardTitle>
         </CardHeader>
         <CardContent>
           {isLoading ? (
@@ -106,7 +108,7 @@ export default function DashboardPage() {
             </div>
           ) : (
             <div className="relative overflow-x-auto">
-              <table className="w-full text-sm text-left text-slate-500">
+              <table className={`w-full text-sm text-slate-500 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                 <thead className="text-xs text-slate-700 uppercase bg-slate-50">
                   <tr>
                     <th className="px-6 py-3">ACID Number</th>
@@ -135,7 +137,7 @@ export default function DashboardPage() {
                           size="sm"
                           onClick={() => router.push(`/dashboard/aci/${declaration.id}`)}
                         >
-                          View
+                          {t('common.view')}
                         </Button>
                       </td>
                     </tr>

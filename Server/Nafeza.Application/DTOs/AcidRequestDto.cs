@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Nafeza.Application.DTOs
 {
@@ -11,6 +12,18 @@ namespace Nafeza.Application.DTOs
         public string Status { get; set; } = string.Empty;
         public DateTime RequestDate { get; set; }
         public int ItemCount { get; set; }
+        public List<InvoiceItemDto>? Items { get; set; }
+    }
+
+    public class InvoiceItemDto
+    {
+        public int Id { get; set; }
+        public string HSCode { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public decimal Quantity { get; set; }
+        public decimal Price { get; set; }
+        public decimal Weight { get; set; }
+        public decimal TotalValue { get; set; }
     }
 
     public class ValidateAciDto

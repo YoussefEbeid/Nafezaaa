@@ -42,7 +42,17 @@ namespace Nafeza.Application.Features.ACI.Queries
                 ExporterName = entity.Exporter.Name,
                 Status = entity.Status.ToString(),
                 RequestDate = entity.CreatedAt,
-                ItemCount = entity.Items.Count
+                ItemCount = entity.Items.Count,
+                Items = entity.Items.Select(i => new DTOs.InvoiceItemDto
+                {
+                    Id = i.Id,
+                    HSCode = i.HSCode,
+                    Description = i.Description,
+                    Quantity = i.Quantity,
+                    Price = i.UnitPrice,
+                    Weight = i.NetWeight,
+                    TotalValue = i.TotalValue
+                }).ToList()
             };
         }
     }

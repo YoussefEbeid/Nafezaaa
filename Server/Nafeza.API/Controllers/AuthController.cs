@@ -39,6 +39,14 @@ namespace Nafeza.API.Controllers
             return Ok(new { UserId = userId, Message = "Registration Successful" });
         }
 
+        // Token Login Endpoint
+        [HttpPost("token-login")]
+        public async Task<ActionResult<LoginResponseDto>> TokenLogin([FromBody] TokenLoginCommand command)
+        {
+            var result = await Mediator.Send(command);
+            return Ok(result);
+        }
+
         // Endpoint to check if the USB e-Token is connected (Mock)
         [HttpGet("check-etoken")]
         public IActionResult CheckEToken()
