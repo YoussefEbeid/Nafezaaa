@@ -1,0 +1,16 @@
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.csproj.AssemblyReference.cache
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.AssemblyInfoInputs.cache
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.AssemblyInfo.cs
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.csproj.CoreCompileInputs.cache
+D:\Nafeza\src\Server\Nafeza.Application\bin\Debug\net8.0\Nafeza.Application.deps.json
+D:\Nafeza\src\Server\Nafeza.Application\bin\Debug\net8.0\Nafeza.Application.dll
+D:\Nafeza\src\Server\Nafeza.Application\bin\Debug\net8.0\Nafeza.Application.pdb
+D:\Nafeza\src\Server\Nafeza.Application\bin\Debug\net8.0\Nafeza.Domain.dll
+D:\Nafeza\src\Server\Nafeza.Application\bin\Debug\net8.0\Nafeza.Domain.pdb
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.A.1B0951B0.Up2Date
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.dll
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\refint\Nafeza.Application.dll
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.pdb
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\ref\Nafeza.Application.dll
+D:\Nafeza\src\Server\Nafeza.Application\obj\Debug\net8.0\Nafeza.Application.sourcelink.json

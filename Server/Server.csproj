@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Nafeza.API\**" />
+    <Compile Remove="Nafeza.Application\**" />
+    <Compile Remove="Nafeza.Domain\**" />
+    <Compile Remove="Nafeza.Infrastructure\**" />
+    <Compile Remove="Nafeza.WebAPI\**" />
+    <Content Remove="Nafeza.API\**" />
+    <Content Remove="Nafeza.Application\**" />
+    <Content Remove="Nafeza.Domain\**" />
+    <Content Remove="Nafeza.Infrastructure\**" />
+    <Content Remove="Nafeza.WebAPI\**" />
+    <EmbeddedResource Remove="Nafeza.API\**" />
+    <EmbeddedResource Remove="Nafeza.Application\**" />
+    <EmbeddedResource Remove="Nafeza.Domain\**" />
+    <EmbeddedResource Remove="Nafeza.Infrastructure\**" />
+    <EmbeddedResource Remove="Nafeza.WebAPI\**" />
+    <None Remove="Nafeza.API\**" />
+    <None Remove="Nafeza.Application\**" />
+    <None Remove="Nafeza.Domain\**" />
+    <None Remove="Nafeza.Infrastructure\**" />
+    <None Remove="Nafeza.WebAPI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.5.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Nafeza.API\Nafeza.API.csproj" />
+  </ItemGroup>
+
+</Project>
