@@ -507,7 +507,7 @@ dotnet test
 
 ## 📄 License
 
-This project is part of Egypt's National Single Window initiative.
+This project is not a part of Egypt's National Single Window initiative.
 
 ## 👥 Authors
 
